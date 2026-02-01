@@ -114,7 +114,7 @@ function MoodChip({ label, emoji, gradient, onClick }: {
 function UserMessage({ content }: { content: string }) {
   return (
     <div className="flex justify-end mb-6">
-      <div className="max-w-[80%] bg-gradient-to-r from-purple-600 to-teal-500 rounded-2xl rounded-tr-sm px-4 py-3">
+      <div className="max-w-[80%] bg-yellow-600 rounded-2xl rounded-tr-sm px-4 py-3">
         <p className="text-white text-sm">{content}</p>
       </div>
     </div>
@@ -144,7 +144,7 @@ function AgentMessage({ playlist, onSave }: {
         <div className="flex items-start justify-between mb-4">
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-2">
-              <Music className="w-5 h-5 text-purple-400" />
+              <Music className="w-5 h-5 text-yellow-500" />
               <h3 className="text-xl font-bold text-white">{playlist.playlist_name}</h3>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">{playlist.mood_analysis}</p>
@@ -155,8 +155,8 @@ function AgentMessage({ playlist, onSave }: {
             size="sm"
             variant="outline"
             className={cn(
-              "ml-4 border-purple-500/50 hover:bg-purple-500/10",
-              isSaved && "bg-purple-500/20 text-purple-300"
+              "ml-4 border-yellow-500/50 hover:bg-yellow-500/10",
+              isSaved && "bg-yellow-500/20 text-yellow-300"
             )}
           >
             <Bookmark className={cn("w-4 h-4 mr-1.5", isSaved && "fill-current")} />
@@ -174,20 +174,20 @@ function AgentMessage({ playlist, onSave }: {
               className={cn(
                 "bg-gray-900/40 border-l-4 transition-all duration-200",
                 song.is_discovery
-                  ? "border-l-teal-400 hover:bg-teal-900/10"
-                  : "border-l-purple-500/30 hover:bg-purple-900/10"
+                  ? "border-l-yellow-500 hover:bg-yellow-900/10"
+                  : "border-l-yellow-500/30 hover:bg-yellow-900/10"
               )}
             >
               <CardContent className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-purple-600 to-teal-500 rounded-lg flex items-center justify-center">
+                  <div className="flex-shrink-0 w-10 h-10 bg-yellow-600 rounded-lg flex items-center justify-center">
                     <Play className="w-5 h-5 text-white" fill="white" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <h4 className="font-semibold text-white text-sm truncate">{song.song_name}</h4>
                       {song.is_discovery && (
-                        <Badge className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white border-0 text-xs px-2 py-0">
+                        <Badge className="bg-yellow-600 text-white border-0 text-xs px-2 py-0">
                           <Sparkles className="w-3 h-3 mr-1" />
                           New Discovery
                         </Badge>
@@ -206,11 +206,11 @@ function AgentMessage({ playlist, onSave }: {
         {discoveryCount > 0 && playlist.discovery_insight && (
           <>
             <Separator className="my-4 bg-gray-700/50" />
-            <div className="bg-gradient-to-r from-teal-900/20 to-cyan-900/20 border border-teal-500/30 rounded-lg p-4">
+            <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
               <div className="flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-teal-400 flex-shrink-0 mt-0.5" />
+                <Sparkles className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-teal-300 text-sm mb-1">Discovery Insight</h4>
+                  <h4 className="font-semibold text-yellow-300 text-sm mb-1">Discovery Insight</h4>
                   <p className="text-gray-300 text-xs leading-relaxed">{playlist.discovery_insight}</p>
                 </div>
               </div>
@@ -265,7 +265,7 @@ function LibrarySidebar({
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-700">
           <div className="flex items-center gap-2">
-            <Library className="w-6 h-6 text-purple-400" />
+            <Library className="w-6 h-6 text-yellow-500" />
             <h2 className="text-2xl font-bold text-white">My Library</h2>
           </div>
           <Button
@@ -316,7 +316,7 @@ function LibrarySidebar({
 
                   {/* Expanded Song List */}
                   {selectedId === playlist.id && (
-                    <div className="mt-2 ml-4 space-y-2 border-l-2 border-purple-500/30 pl-4">
+                    <div className="mt-2 ml-4 space-y-2 border-l-2 border-yellow-500/30 pl-4">
                       {playlist.songs.map((song, idx) => (
                         <div key={idx} className="text-sm">
                           <p className="text-white font-medium">{song.song_name}</p>
@@ -436,27 +436,27 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-yellow-900/20 to-gray-900 flex flex-col">
       {/* Header */}
       <header className="sticky top-0 z-30 bg-gray-900/80 backdrop-blur-lg border-b border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-teal-500 rounded-xl flex items-center justify-center">
+            <div className="w-10 h-10 bg-yellow-600 rounded-xl flex items-center justify-center">
               <Music className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold text-yellow-500">
               Moodify
             </h1>
           </div>
           <Button
             onClick={() => setLibraryOpen(true)}
             variant="outline"
-            className="border-purple-500/50 text-purple-300 hover:bg-purple-500/10"
+            className="border-yellow-500/50 text-yellow-300 hover:bg-yellow-500/10"
           >
             <Library className="w-4 h-4 mr-2" />
             My Library
             {savedPlaylists.length > 0 && (
-              <Badge className="ml-2 bg-purple-500 text-white">{savedPlaylists.length}</Badge>
+              <Badge className="ml-2 bg-yellow-600 text-white">{savedPlaylists.length}</Badge>
             )}
           </Button>
         </div>
@@ -489,7 +489,7 @@ export default function Home() {
             {loading && (
               <div className="flex justify-start mb-6">
                 <div className="bg-gray-800/60 backdrop-blur-md border border-gray-700/50 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-3">
-                  <Loader2 className="w-5 h-5 text-purple-400 animate-spin" />
+                  <Loader2 className="w-5 h-5 text-yellow-500 animate-spin" />
                   <p className="text-gray-300 text-sm">Curating your perfect playlist...</p>
                 </div>
               </div>
@@ -529,12 +529,12 @@ export default function Home() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Describe your mood or activity..."
                 disabled={loading}
-                className="flex-1 h-12 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-purple-500 focus:ring-purple-500/20"
+                className="flex-1 h-12 bg-gray-800 border-gray-700 text-white placeholder:text-gray-500 focus:border-yellow-500 focus:ring-yellow-500/20"
               />
               <Button
                 type="submit"
                 disabled={loading || !input.trim()}
-                className="h-12 px-6 bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-500 hover:to-teal-400 text-white"
+                className="h-12 px-6 bg-yellow-600 hover:bg-yellow-500 text-white"
               >
                 {loading ? (
                   <Loader2 className="w-5 h-5 animate-spin" />
