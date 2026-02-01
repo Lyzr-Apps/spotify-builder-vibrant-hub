@@ -1,0 +1,166 @@
+{
+  "agent_name": "Music Curator Agent",
+  "agent_id": "697f79af066158e77fde7b69",
+  "agent_purpose": "recommendation",
+  "description": "Returns a personalized music playlist with song recommendations, artist information, mood analysis, and discovery insights",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "playlist_name": "string",
+      "mood_analysis": "string",
+      "songs": [
+        {
+          "song_name": "string",
+          "artist": "string",
+          "reason": "string",
+          "is_discovery": "boolean"
+        }
+      ],
+      "discovery_insight": "string",
+      "metadata": {
+        "agent_name": "string",
+        "timestamp": "string"
+      }
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "playlist_name": "Sunday Morning Nostalgia",
+      "mood_analysis": "You're feeling nostalgic and looking to create a cozy, warm atmosphere while cooking dinner. This playlist will evoke memories and comfort, perfect for your Sunday morning vibe.",
+      "songs": [
+        {
+          "song_name": "Landslide",
+          "artist": "Fleetwood Mac",
+          "reason": "This classic is timeless and brings a sense of warmth and nostalgia, making it a perfect fit for a cozy Sunday vibe.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Fast Car",
+          "artist": "Tracy Chapman",
+          "reason": "Tracy Chapman's soulful voice and the storytelling in this song wrap you in comfort and warmth, fantastic for reminiscing.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Put It All On Me",
+          "artist": "Ed Sheeran",
+          "reason": "With its comforting melody, this track brings a light-hearted feeling that pairs wonderfully with cooking in a nostalgic ambiance.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Come Away With Me",
+          "artist": "Norah Jones",
+          "reason": "Norah's smooth vocals and the gentle tune create an intimate atmosphere, enhancing your cozy cooking experience.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Hallelujah",
+          "artist": "Jeff Buckley",
+          "reason": "This hauntingly beautiful rendition evokes emotions and memories, perfect for a reflective Sunday morning.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Home",
+          "artist": "Edward Sharpe & The Magnetic Zeros",
+          "reason": "The cheerful spirit of this song adds a lively but warm touch to your cooking session, uplifting yet cozy.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Banana Pancakes",
+          "artist": "Jack Johnson",
+          "reason": "Nothing screams cozy like this gentle tune, ideal for a Sunday breakfast vibe while cooking your warm dinner.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Peaches",
+          "artist": "Justin Bieber (feat. Daniel Caesar & Giveon)",
+          "reason": "This modern classic has a warm, inviting melody that continues the cozy feeling while adding a new flavor to your playlist.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Cherry",
+          "artist": "Harry Styles",
+          "reason": "With its airy sound and nostalgic feel, this song is perfect for enhancing your warm, cozy cooking atmosphere.",
+          "is_discovery": true
+        }
+      ],
+      "discovery_insight": "You likely haven't explored Harry Styles' solo work much, and 'Cherry' has that lovely mix of nostalgic warmth and modern vibes that will complement your cooking perfectly. It\u2019ll add a refreshing twist while keeping the cozy feel!",
+      "metadata": {
+        "agent_name": "Music Curator Agent",
+        "timestamp": "2023-10-07T10:00:00Z"
+      }
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-01T16:06:47.951800",
+  "test_message_used": "Provide sample recommendations for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "playlist_name": "Sunday Morning Nostalgia",
+      "mood_analysis": "You're feeling nostalgic and looking to create a cozy, warm atmosphere while cooking dinner. This playlist will evoke memories and comfort, perfect for your Sunday morning vibe.",
+      "songs": [
+        {
+          "song_name": "Landslide",
+          "artist": "Fleetwood Mac",
+          "reason": "This classic is timeless and brings a sense of warmth and nostalgia, making it a perfect fit for a cozy Sunday vibe.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Fast Car",
+          "artist": "Tracy Chapman",
+          "reason": "Tracy Chapman's soulful voice and the storytelling in this song wrap you in comfort and warmth, fantastic for reminiscing.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Put It All On Me",
+          "artist": "Ed Sheeran",
+          "reason": "With its comforting melody, this track brings a light-hearted feeling that pairs wonderfully with cooking in a nostalgic ambiance.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Come Away With Me",
+          "artist": "Norah Jones",
+          "reason": "Norah's smooth vocals and the gentle tune create an intimate atmosphere, enhancing your cozy cooking experience.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Hallelujah",
+          "artist": "Jeff Buckley",
+          "reason": "This hauntingly beautiful rendition evokes emotions and memories, perfect for a reflective Sunday morning.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Home",
+          "artist": "Edward Sharpe & The Magnetic Zeros",
+          "reason": "The cheerful spirit of this song adds a lively but warm touch to your cooking session, uplifting yet cozy.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Banana Pancakes",
+          "artist": "Jack Johnson",
+          "reason": "Nothing screams cozy like this gentle tune, ideal for a Sunday breakfast vibe while cooking your warm dinner.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Peaches",
+          "artist": "Justin Bieber (feat. Daniel Caesar & Giveon)",
+          "reason": "This modern classic has a warm, inviting melody that continues the cozy feeling while adding a new flavor to your playlist.",
+          "is_discovery": false
+        },
+        {
+          "song_name": "Cherry",
+          "artist": "Harry Styles",
+          "reason": "With its airy sound and nostalgic feel, this song is perfect for enhancing your warm, cozy cooking atmosphere.",
+          "is_discovery": true
+        }
+      ],
+      "discovery_insight": "You likely haven't explored Harry Styles' solo work much, and 'Cherry' has that lovely mix of nostalgic warmth and modern vibes that will complement your cooking perfectly. It\u2019ll add a refreshing twist while keeping the cozy feel!",
+      "metadata": {
+        "agent_name": "Music Curator Agent",
+        "timestamp": "2023-10-07T10:00:00Z"
+      }
+    }
+  },
+  "test_passed": false
+}
